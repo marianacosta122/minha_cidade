@@ -1,0 +1,172 @@
+body {
+    background-color: #3d3a6b;
+    color: #e6e0ff;
+    font-family: sans-serif;
+    padding: 2%;
+    margin: 0;
+}
+
+nav {
+    padding: 1rem 0;
+    color: #e6e0ff;
+}
+
+p {
+    margin-bottom: 12px;
+    font-family: sans-serif;
+    color: #e6e0ff;
+}
+
+h1, h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #e6e0ff;
+    padding: 2%;
+    margin: auto;
+}
+
+#Guarulhos {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.destaque {
+    background-color: #56508f;
+    color: #f4a261;
+    padding: 1%;
+    border-radius: 4px;
+}
+
+#informacao p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+figure img {
+   display: block;
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#lugares {
+    padding-left: 1.2rem;
+}
+
+#lugares li {
+    margin-bottom: 0.4rem;
+}
+
+button {
+    background-color: #f4a261;
+    color: #3d3a6b;
+    border: none;
+    padding: 0.7rem 1.6rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e6e0ff;
+    color: #fbfbff;
+}
+
+label {
+    color: #e6e0ff;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+input {
+    font-family: inherit;
+    padding: 0.6rem;
+    border: 1px solid #e6e0ff;
+    border-radius: 3px;
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+input[type="email"] {
+    border: 2px solid #f4a261;
+    background-color: #f2f2fc;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+    color: #e6e0ff;
+}
+.importante {
+    font-style: italic;
+}
+.lugares {
+  padding: 2rem 0;
+}
+
+.lugares h2 {
+  margin-bottom: 1.5rem;
+  padding-left: 0.75rem;
+  border-left: 5px solid #ffa36c;   
+}
+
+.lugares__lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.lugares__item {
+  flex: 1 1 220px;
+  background: #574f8f;
+  border-left: 4px solid #ffa36c;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.lugares__item h3 {
+  color: #ffa36c;
+  margin-bottom: 0.25rem;
+}
+
+.lugares__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3);
+}
+
+.botao {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  background: #ffa36c;
+  color: #3c3769;           
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.botao:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  color: #ffa36c;
+  border-bottom-color: #ffa36c;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}

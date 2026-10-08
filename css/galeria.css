@@ -1,0 +1,156 @@
+/* ===== Variáveis (cores) ===== */
+:root {
+  --fundo: #3c3769;     /* mesma cor de fundo da página */
+  --caixa: #574f8f;     /* mesma cor das caixinhas de texto */
+  --destaque: #ffa36c;  /* laranja dos textos */
+  --texto: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+/* ===== Topo e navegação ===== */
+.topo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 2rem;
+  background: var(--fundo);
+  color: var(--texto);
+  border-bottom: 6px solid var(--destaque);
+}
+
+.topo ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.topo a {
+  color: var(--texto);
+  text-decoration: none;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
+}
+
+.topo a:hover,
+.topo a[aria-current="page"] {
+  border-bottom-color: var(--destaque);
+}
+
+/* ===== Galeria ===== */
+.galeria {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.galeria h2 {
+  color: var(--destaque);
+  margin-bottom: 1.5rem;
+}
+
+.galeria__lista {
+  display: flex;
+  flex-wrap: wrap;            /* quebra as linhas quando falta espaço */
+  gap: 1.5rem;                /* espaçamento entre os cartões */
+  justify-content: center;    /* escolhido após testar os valores abaixo */
+}
+
+/*
+  Testes de justify-content:
+  - flex-start:    última linha fica colada à esquerda, sobra vazio à direita
+  - flex-end:      última linha fica colada à direita
+  - space-between: última linha se espalha e fica desalinhada com as de cima
+  - space-around:  espaços irregulares nas bordas
+  - space-evenly:  espaços iguais, mas a última linha continua deslocada
+  - center:        melhor equilíbrio; a última linha fica centralizada
+*/
+
+/* ===== Cartões ===== */
+.cartao {
+  /* flex: crescer 0, encolher 1, largura base (mínima desejada) 260px */
+  flex: 0 1 260px;
+  background: var(--caixa);
+  border: 3px solid var(--caixa);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.cartao img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.cartao figcaption {
+  padding: 1rem;
+  border-top: 3px solid var(--destaque);
+}
+
+.cartao h3 {
+  color: var(--destaque);
+  margin-bottom: 0.25rem;
+}
+
+/* ===== Efeito :hover ===== */
+.cartao:hover {
+  transform: translateY(-6px);
+  border-color: var(--destaque);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.35);
+}
+
+.cartao:hover img {
+  transform: scale(1.08);
+}
+
+/* ===== Rodapé ===== */
+.rodape {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  background: var(--fundo);
+  color: var(--texto);
+}
+
+/* ===== Telas menores ===== */
+@media (max-width: 600px) {
+  .topo {
+    padding: 1rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .galeria {
+    padding: 1.5rem 1rem;
+  }
+
+  .galeria__lista {
+    gap: 1rem;
+  }
+
+  .cartao {
+    flex-basis: 100%;   /* um cartão por linha no celular */
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cartao,
+  .cartao img {
+    transition: none;
+  }
+}
